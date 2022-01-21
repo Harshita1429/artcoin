@@ -1,0 +1,663 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	 <meta name="viewport" content="width=device-width, initial-scale=1">
+	 <script src="https://kit.fontawesome.com/0038dd4693.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.anychart.com/releases/8.11.0/js/anychart-base.min.js"></script>    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300&family=Karla:wght@400;500;600;800&family=Rubik:wght@500&display=swap" rel="stylesheet">
+     <style>
+  	*{
+  	margin: 0; 
+  	padding:0;
+  	box-sizing: border-box;
+  	font-family: 'Be Vietnam Pro', sans-serif;
+font-family: 'Karla', sans-serif;
+font-family: 'Rubik', sans-serif;
+  	}
+  	html{
+  		scroll-behavior: smooth;
+  	}
+  	 .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            cursor: pointer;
+        }
+        .nav-list {
+            width: 60%;
+            display: flex;
+            align-items: center;
+        }
+ 
+        .nav-list li {
+            list-style: none;
+            padding: 26px 30px;
+        }
+ 
+        .nav-list li a {
+            text-decoration: none;
+            color: white;
+        }
+        .right-nav {
+            width: 40%;
+            text-align: right;
+        }
+        .btn {
+        	border-radius: 15px;
+            border: 1px solid;
+            background-color: black;
+            cursor: pointer;
+            padding: 10px 20px;
+          } 
+        .navbar-brand{
+        	font-size: 25px;
+        }
+        .row{
+        	display: flex;
+        }
+        #mid{
+        	background-image: linear-gradient(to bottom,white,#f4f1fa);
+        }
+        video{
+        	box-shadow:  20px 20px #FAC898;
+        }
+        .navbar-collapse{
+  		margin-right: auto;
+  	}
+  	#container { 
+        width: 100%; height: 300px; margin: 0; padding: 0; 
+      } 
+     .intro .buttons a.btn {
+    margin: 10px;
+    padding: 10px 30px
+}
+.column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+
+/* Remove extra left and right margins, due to padding in columns */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* Style the counter cards */
+#one .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+/* Responsive columns - one column layout (vertical) on small screens */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+#two .btn {
+    position: relative;
+    color: #fff;
+    border-radius: 35px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    font-size: 14px;
+    font-weight: 700
+}
+li a{
+	color: black;
+	text-decoration: none;
+	}
+ul{
+	list-style-type: none;}
+#test{
+  border: 2px solid blue;
+  background-color: white;
+  border-radius: 5px;
+  padding: 16px;
+  margin: 16px 0;
+  text-align: center;
+}
+
+#test::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#test img {
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+#test span {
+  font-size: 20px;
+  margin-right: 15px;
+}
+
+@media (max-width: 500px) {
+  #test {
+      text-align: center;
+  }
+  #test img {
+      margin: auto;
+      float: none;
+      display: block;
+  }
+}
+@media screen and (max-width:320px)
+{
+  .right-nav a{
+  	margin-left: -20px;
+  } 
+}
+</style>
+
+
+</head>
+<body>
+	<div class="container-fluid" style=" background-color: #f4f1fa">
+    <div class="row d-flex">
+	<nav class="navbar navbar-expand-sm navbar-light w-100">
+		<div class="navbar-brand justify-content-start" style="color: #00008b;">
+		<img src="bird.jpg" style="width:30px;">Art<b>Coin</b>
+	</div>
+	<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#collapsenavbar" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="navbar-collapse text-center collapse" id="collapsenavbar" style="width: 100%;">
+		<ul class="navbar-nav justify-content-center font-weight-bold" style="width: 100%;">
+				<li class="navbar-item mx-1 p-2">
+					<a href="#home" class="navbar-link text-warning text-decoration-none">Home</a></li>
+				<li class="navbar-item mx-1 p-2">
+                    <a href="#about" class="navbar-link text-dark text-decoration-none">About</a></li>
+				<li class="navbar-item mx-1 p-2 dropdown-toggle" data-toggle="dropdown">
+				    <a href="#pages" class="navbar-link text-dark text-decoration-none">Pages</a></li>
+				<li class="navbar-item mx-1 p-2 ">
+					<a href="#blog" class="navbar-link  text-dark text-decoration-none">Blog</a></li>
+				<li class="navbar-item mx-1 p-2">
+					<a href="#contact" class="navbar-link  text-dark text-decoration-none">Contact</a></li>
+			</ul>
+		</div>
+			<div class="right-nav font-weight-bold">
+				<a href="#signup" class="text-decoration-none mx-3 " style="color:#00008b">SignUp</a>
+				<button class="btn text-light mx-3 shadow-lg" style="background-color: #00008b; border-radius: 35px;">Log in</button>
+			</div>
+	</nav>
+    </div>
+    <div class="container">
+	<div class="row mt-5 justify-content-center">
+		<div class="col-sm-4 col-md-6 col-12 justify-content-center mx-2">
+			<h1 class="font-weight-bold"style="color: #00008b; font-size: 6vw;">Cryptocurrency</h1>
+			<h1 class="font-weight-bold" style="color: #ffb347; font-size: 6vw;">technology</h1>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+			<button class="btn text-light shadow-lg mb-5" style="background-color: #ffb347; border-radius: 35px;">Sign Up</button>
+		</div>
+		<div class=" col-md-4 col-6 ">
+			<img src="man.png" class="center" style="width: 100%;">
+		</div>
+		<div class="col-md-1 col-6 justify-content-center">
+			<div class="social p-3">
+					<a href="#" target="_blank" class=" d-flex text-decoration-none mx-2">
+            <i class="fa fa-facebook" aria-hidden="true" style="font-size: 24px; color: #00008b"></i>
+        </a>
+	    </div>
+	    <div class="social p-3">
+					<a href="#" target="_blank" class=" d-flex text-decoration-none text-dark  mx-2">
+            <i class="fa fa-twitter" aria-hidden="true" style="font-size: 24px; color: #00008b"></i>
+        </a>
+	    </div>
+	    <div class="social p-3">
+					<a href="#" target="_blank" class=" d-flex text-decoration-none text-dark  mx-2">
+            <i class="fa fa-instagram" aria-hidden="true" style="font-size: 24px; color: #00008b"></i>
+        </a>
+	    </div>
+	    <div class="social  p-3">
+					<a href="#" target="_blank" class=" d-flex text-decoration-none text-dark  mx-2">
+            <i class="fa fa-linkedin" aria-hidden="true" style="font-size: 24px; color: #00008b"></i>
+        </a>
+	    </div>
+		</div>
+	</div>
+	</div>
+</div>
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f4f1fa" fill-opacity="1" d="M0,256L48,229.3C96,203,192,149,288,122.7C384,96,480,96,576,122.7C672,149,768,203,864,213.3C960,224,1056,192,1152,192C1248,192,1344,224,1392,240L1440,256L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+		<h4 style="text-align:center; color: darkblue; font-weight: bold;">Trusted Over 2300+ Companies in World</h4>
+		<div class=" conatiner  mx-2">
+		<img src="logos.jpg">
+		<img src="dum.png">
+		<img src="logos.jpg">
+		<img src="logos.jpg">
+		<img src="dum.png">
+	</div>
+	<div class="container">
+	<div class="row mt-3">
+		<div class="col-md-4 col-10 mx-sm-0 col-sm-6 mb-5">
+		<div class="card shadow-lg shadow-info" style="box-shadow: #f4f1fa">
+			<img class="card-img-top" src="logos.jpg">
+			<div class="card-body text-center">
+				<h4 class="card-title" style="color:#00008b; font-weight: bold;">Bitcoin Mining</h4>
+				<p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
+			</div>
+		</div>	
+		</div>
+		<div class="col-md-4 col-10 mx-sm-0 col-sm-6 mb-5">
+		<div class="card shadow  shadow-info bg-light">
+			<img class="card-img-top" src="logos.jpg">
+			<div class="card-body text-center">
+				<h4 class="card-title" style="color:#00008b; font-weight: bold;">Bitcoin Trading</h4>
+				<p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
+			</div>
+		</div>
+	    </div>
+	    <div class="col-md-4 col-10 mx-sm-0 col-sm-6 mb-5">
+		<div class="card shadow bg-light">
+			<img class="card-img-top" src="logos.jpg">
+			<div class="card-body text-center">
+				<h4 class="card-title" style="color:#00008b; font-weight: bold;">Coin Machine</h4>
+				<p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
+			</div>
+		</div>
+	    </div>
+	</div>
+</div>
+	<h2  style="text-align:center; color: darkblue; font-weight: bold; margin-top: 50px;">What Services We Offer</h2>
+	<p class="container"style="text-align: center;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard. Lorem </p>
+	<div id="mid">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<div class="card border-0">
+				<img class="card-img-top align-self-center" src="dume.png" style="width: 100px;">
+				<div class="card-body text-center">
+					<h4 class="card-title" style="color: #00008b ">Secure Wallet</h4>
+					<p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the </p>
+				</div>
+			</div>
+			<div class="card border-0" style="background-image: linear-gradient(to bottom,white,#f4f1fa);">
+				<img class="card-img-top align-self-center" src="dume.png" style="width: 100px;">
+				<div class="card-body text-center">
+					<h4 class="card-title" style="color: #00008b ">Analysis & Planning</h4>
+					<p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the </p>
+				</div>
+			</div>
+		 </div>
+			<div class="col-md-4">
+				<img src="bitcoin.png" style="width: 100%; height: 400px">
+			</div>
+             <div class="col-md-4">
+				<div class="card border-0">
+				<img class="card-img-top align-self-center" src="dume.png" style="width: 100px;">
+				<div class="card-body text-center">
+					<h4 class="card-title" style="color: #00008b ">Fully Protection</h4>
+					<p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the </p>
+				</div>
+			</div>
+			<div class="card border-0" style="background-image: linear-gradient(to bottom,white,#f4f1fa);">
+				<img class="card-img-top align-self-center" src="dume.png" style="width: 100px; ">
+				<div class="card-body text-center">
+					<h4 class="card-title" style="color: #00008b ">Crypto Trading</h4>
+					<p class="card-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the </p>
+				</div>
+			</div>
+		 </div>
+		</div>
+	</div>
+</div>
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f4f1fa" fill-opacity="1" d="M0,256L48,229.3C96,203,192,149,288,122.7C384,96,480,96,576,122.7C672,149,768,203,864,213.3C960,224,1056,192,1152,192C1248,192,1344,224,1392,240L1440,256L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path></svg>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6">
+			<h3 style="color: #ffb347">ABOUT US</h3>
+			<h1 style="color:#00008b">BrandedCoin is the <br> best for your ICO</h1>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard. Lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
+			<img src="sign.png" style="width: 150px; height: 100px;">
+			<p>Cheif Executive</p>
+			<button class="btn shadow-lg mt-2"style="background-color:#ffb347 ; color: white; border-radius: 20px;">ABOUT US</button>
+		</div>
+		<div class="col-md-6 text-center" id="new">
+			<video width="330" height="240" controls style=" margin-top: 50px; width: 100%;">
+            <source src="movie.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+			</video>
+		</div>
+		<div class="col-md-12 col-12 mx-auto mx-sm-0 justify-content-center" style="width: 100%;">
+			<div class="column">
+		<div class="card mx-2 my-4 shadow-lg" id="one">
+			<img  class="card-img-top align-self-center" src=" globe.png" style="width: 100px;">
+			<div class="card-body text-center">
+				<h4 class="card-title" style="color:#00008b; font-weight: bold;">1,304+</h4>
+				<p class="card-text">Cybersecurity</p>
+			</div>
+		</div>
+	</div>
+	<div class="column">
+		<div class="card mx-2 my-4 shadow-lg" >
+			<img  class="card-img-top align-self-center" src=" globe.png" style="width: 100px; ">
+			<div class="card-body text-center">
+				<h4 class="card-title" style="color:#00008b; font-weight: bold;">15%</h4>
+				<p class="card-text">Service Guarantee</p>
+			</div>
+		</div>
+	</div>
+	<div class="column">
+		<div class="card mx-2 my-4 shadow-lg">
+			<img  class="card-img-top align-self-center" src=" globe.png" style="width: 100px;">
+			<div class="card-body text-center">
+				<h4 class="card-title" style="color:#00008b; font-weight: bold;">253+</h4>
+				<p class="card-text">Clients Protection</p>
+			</div>
+		</div>
+	</div>
+	<div class="column">
+		<div class="card mx-2 my-4 shadow-lg">
+			<img  class="card-img-top align-self-center" src=" globe.png" style="width: 100px;">
+			<div class="card-body text-center">
+				<h4 class="card-title" style="color:#00008b; font-weight: bold;">22+</h4>
+				<p class="card-text">Team Experts</p>
+			</div>
+		</div>
+	</div>
+	</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-12">
+			<img src="bit.png" style="width: 100%; margin-top: 50px;">
+		</div>
+		<div class="col-md-6 col-12 mt-5">
+			<h1 style="color: #00008b; ">BrandedCoin Theme is the best for your ICO</h1>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+			<p style="color: #00008b "><i class="fas fa-check" style="color: orange"></i> Lorem Ipsum is simply dummy text of the printing<br><i class="fas fa-check" style="color: orange"></i> Lorem Ipsum is simply dummy text of the printing<br><i class="fas fa-check" style="color: orange"></i> Lorem Ipsum is simply dummy text of the printing
+			</p>
+			<button class="btn shadow-lg" style="background-color:#ffb347; color: white;">GET STARTED NOW</button>
+		</div>
+</div>
+<div class="row">
+		<div class="col-md-6 col-12 mt-5">
+			<h1 style="color: #00008b; ">Awesome Service that works for you.</h1>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+			<p style="color: #00008b "><i class="fas fa-check" style="color: orange"></i> Lorem Ipsum is simply dummy text of the printing<br><i class="fas fa-check" style="color: orange"></i> Lorem Ipsum is simply dummy text of the printing<br><i class="fas fa-check" style="color: orange"></i> Lorem Ipsum is simply dummy text of the printing
+			</p>
+			<button class="btn shadow-lg" style="background-color:#ffb347; color: white; ">GET STARTED NOW</button>
+		</div>
+		<div class="col-md-6 col-12">
+			<img src="bit.png" style="width: 100%; margin-top: 50px;">
+		</div>
+</div>
+</div>
+<div class="container-fluid">
+<div class=" text-center justify-content-center" style="background-color: #f4f1fa ">
+	<h1 style="color: #00008b; margin-top: 10px; padding-top: 50px;">Still Confused About Our Features?<br>Get a Free Trail 7 Days</h1>
+	<p style="margin-top: 50px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply.</p>
+	<button class="btn shadow-lg mt-3 p-3 mb-5" style=" background-color:#ffb347; color: white;">BUY TOKEN</button>
+</div>
+</div>
+<div class="container">
+<div class="text-center mt-5">
+	<h1 style="color: #00008b;">Token Distibution</h1>
+	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+	<div class="table-responsive">
+	<table class="table table-bordered mt-5s">
+      <thead style="background-color:  #00008b; color: white;">
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Symbol</th>
+          <th>Platform</th>
+          <th>General Release</th>
+      </tr>
+  </thead>
+  <tbody style="color:  #00008b; ">
+        <tr>
+        	<th>BrandCoin Token</th>
+        	<th>ERC2o</th>
+        	<th>IQN</th>
+            <th>Etherium</th>
+            <th>15,000,000 IQN</th>
+          </tr>
+      </tbody>
+  </table>
+</div>
+</div>
+<div class="row">
+	<div class="col-md-6 col-12" id="container">
+		<script>
+	anychart.onDocumentReady(function () {
+  
+  // add data
+  var data = anychart.data.set([
+    ['Distribute to Community', 25],
+    ['Reserved Funding', 25],
+    ['Founders and Teams', 15],
+    ['Advisors', 12.50],
+    ['Bounty Campaign', 12.50]
+  ]);
+  
+  // create a pie chart with the data
+  var chart = anychart.pie(data);
+  
+  // set the chart radius making a donut chart
+  chart.innerRadius('55%')
+
+  // create a color palette
+  var palette = anychart.palettes.distinctColors();
+ 
+  // set the colors according to the brands
+  palette.items([
+    { color: 'green' },
+    { color: 'purple' },
+    { color: 'blue' },
+    { color: 'orange' },
+    { color: 'lightblue' },
+  ]);
+
+  // apply the donut chart color palette
+  chart.palette(palette);
+  
+  // set the position of labels
+  
+  // disable the legend
+  chart.legend(false);
+  
+  chart.container('container');
+  
+  // initiate chart drawing
+  chart.draw();
+
+});
+</script>
+    </div>
+	<div class="col-md-6 col-12">
+			<div style="width:20px;height:10px; background-color: green;">
+			</div>
+			<p style="margin-top: -18px; margin-left: 20px;">Distribute to Community</p>
+			<div style="width:20px;height:10px; background-color: purple; margin-top: 20px;">
+			</div>
+			<p style="margin-top: -18px; margin-left: 20px;">Reserved Funding</p>
+
+			<div style="width:20px;height:10px; background-color: blue; margin-top: 20px;">
+			</div>
+			<p style="margin-top: -18px; margin-left: 20px;">Founders and Teams</p>
+			<div style="width:20px;height:10px; background-color: orange; margin-top: 20px;">
+			</div>
+			<p style="margin-top: -18px; margin-left: 20px;">Advisors</p>
+				<div style="width:20px;height:10px; background-color: lightblue; margin-top: 20px;">
+			</div>
+			<p style="margin-top: -18px; margin-left: 20px;">Bounty Campaign</p>
+		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+		<button class="btn shadow-lg mt-3 p-3 mb-5" style=" background-color:#ffb347; color: white;">BUY TOKEN</button>
+	</div>
+</div>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+  <path fill="#f4f1fa" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+</svg>
+<div id="end" style="background-image: linear-gradient(to bottom,#f4f1fa,white);">
+	<div class="container">
+		<div class="row">
+		<div class="col-md-6 col-12">
+			<h3  style="color: #ffb347; margin-top: 100px;">MOBILE APP</h3>
+			<h1 style="color: #00008b; margin-top: 20px;">BrandedCoin App for<br>ICO Platform</h1>
+			<p style="margin-top: 20px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
+			<div class="btn mt-5"> <a href="#" id="two"><i class="fa fa-google-play fa-2x"></i><small>Get it on</small><br><big>Google play</big></a> <a href="#" class="btn" ><i class="fa fa-apple fa-2x"></i> <small>Download it on</small><br><big>App Store</big></a></div>
+		</div>
+		<div class="col-md-6 col-12">
+			<img src="mobile.png" style="width: 100%;">
+		</div>
+	</div>
+	<div class="container" id="test">
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+  <img src="pass.png" style="width:90px">
+  <p><span>Rizwan Joseph</span><br> CEO, Co-Founder</p>
+</div>
+<div class="text-center justify-content-center">
+	<h1 style="color: #00008b"><b>Latest News</b></h1>
+	<div class="row mt-3">
+		<div class="col-md-4 col-10 mx-sm-0 col-sm-6 mb-5">
+		<div class="card shadow-lg shadow-info" style="box-shadow: #f4f1fa">
+			<img class="card-img-top" src="logos.jpg">
+			<div class="card-body text-center">
+				<h4 class="card-title" style="color:#00008b; font-weight: bold;">The Crypto project has reaches billions</h4>
+				<p class="card-text" style="color: #ffb347">August 10,2021</p>
+			</div>
+		</div>	
+		</div>
+		<div class="col-md-4 col-10 mx-sm-0 col-sm-6 mb-5">
+		<div class="card shadow  shadow-info bg-light">
+			<img class="card-img-top" src="logos.jpg">
+			<div class="card-body text-center">
+				<h4 class="card-title" style="color:#00008b; font-weight: bold;">Start the redemption before ICO</h4>
+				<p class="card-text" style="color: #ffb347">August 12,2021</p>
+			</div>
+		</div>
+	    </div>
+	    <div class="col-md-4 col-10 mx-sm-0 col-sm-6 mb-5">
+		<div class="card shadow bg-light">
+			<img class="card-img-top" src="logos.jpg">
+			<div class="card-body text-center">
+				<h4 class="card-title" style="color:#00008b; font-weight: bold;">The BC-Crpypto has reached billions</h4>
+				<p class="card-text" style="color: #ffb347">August 15,2021</p>
+			</div>
+		</div>
+	    </div>
+	    <div class="col-md-4 col-10 mx-sm-0 col-sm-6 mb-5">
+		<div class="card shadow bg-light">
+			<img class="card-img-top" src="logos.jpg">
+			<div class="card-body text-center">
+				<h4 class="card-title" style="color:#00008b; font-weight: bold;">Loreum ipsy is dummy text</h4>
+				<p class="card-text" style="color: #ffb347">August 17,2021</p>
+			</div>
+		</div>
+	    </div>
+	</div>
+</div>
+</div>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="margin-top: -100px;">
+  <path fill="#f4f1fa" fill-opacity="1" d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+</svg>
+<div id="late" style="background-color: #f4f1fa">
+<div class="container">
+<form class="form-inline" action="/action_page.php">
+  <p style="color: #00008b; margin-top: 15px;"> Keep Updated About Our Product.</p>
+    <input class="form-control mr-sm-2 w-50 " type="text" placeholder="Enter Your Email">
+    <button class="btn" style="background-color: #ffb347" type="submit">Submit</button>
+  </form>
+  <hr>
+</div>
+</body>
+<footer>
+	<div class="container">
+	<div class="row">	
+	<div class="col-md-3 col-sm-6 col-xs-12 footer-list">
+		<h4 style="color: #00008b">Resources</h4>
+		<ul>
+			<li><a href="#" style="color: black; list-style-type: none;">White Papers</a></li>
+			<li><a href="#">Technical Papers</a></li>
+			<li><a href="#">Business Summary</a></li>
+			<li><a href="#">Brand Resources</a></li>
+		</ul>
+	</div>
+	<div class="col-md-3 col-sm-6 col-xs-12 footer-list">
+		<h4 style="color: #00008b">Bitcoin Price API</h4>
+		<ul>
+			<li><a href="#"  style="color: black; list-style-type: none;">White Papers</a></li>
+			<li><a href="#">Technical Papers</a></li>
+			<li><a href="#">Business Summary</a></li>
+			<li><a href="#">Brand Resources</a></li>
+		</ul>
+	</div>
+	<div class="col-md-3 col-sm-6 col-xs-12 footer-list">
+		<h4 style="color: #00008b">MarketPlace</h4>
+		<ul>
+			<li><a href="#" style="color: black; list-style-type: none;">White Papers</a></li>
+			<li><a href="#">Technical Papers</a></li>
+			<li><a href="#">Business Summary</a></li>
+			<li><a href="#">Brand Resources</a></li>
+		</ul>
+	</div>
+	<div class="col-md-3 col-sm-6 col-xs-12 footer-list">
+		<h4 style="color: #00008b">About Us</h4>
+		<ul>
+			<li><a href="#" style="color: black; list-style-type: none;">White Papers</a></li>
+			<li><a href="#">Technical Papers</a></li>
+			<li><a href="#">Business Summary</a></li>
+			<li><a href="#">Brand Resources</a></li>
+		</ul>
+	</div>
+	<div class="col-md-2 mt-3">
+<img src="bird.jpg">Art<b>Coin</b>
+</div>
+<div class="col-md-5 mt-3">
+<p> Copyright 2021 ArtCoin.All rights reserved.</p>
+</div>
+<div class="col-md-2 mt-3">
+	<hr>
+</div>
+<div class="col-md-3 mt-3">
+<div class="d-flex">
+<div class="social mx-1">
+					<a href="#" target="_blank" class=" text-decoration-none ">
+            <i class="fa fa-facebook" aria-hidden="true" style="font-size: 24px; color: #00008b"></i>
+        </a>
+	    </div>
+	    <div class="social mx-1">
+					<a href="#" target="_blank" class="text-decoration-none text-dark">
+            <i class="fa fa-twitter" aria-hidden="true" style="font-size: 24px; color: #00008b"></i>
+        </a>
+	    </div>
+	    <div class="social mx-1">
+					<a href="#" target="_blank" class=" text-decoration-none text-dark">
+            <i class="fa fa-instagram" aria-hidden="true" style="font-size: 24px; color: #00008b"></i>
+        </a>
+	    </div>
+	    <div class="social mx-1">
+					<a href="#" target="_blank" class=" text-decoration-none text-dark">
+            <i class="fa fa-linkedin" aria-hidden="true" style="font-size: 24px; color: #00008b"></i>
+        </a>
+	    </div>
+</div>
+</div>
+</div>
+</footer>
+</html>
