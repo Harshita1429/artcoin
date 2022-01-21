@@ -54,11 +54,10 @@ font-family: 'Rubik', sans-serif;
             text-align: right;
         }
         .btn {
-        	border-radius: 15px;
             border: 1px solid;
             background-color: black;
             cursor: pointer;
-            padding: 10px 20px;
+            color: #fff;
           } 
         .navbar-brand{
         	font-size: 25px;
@@ -113,17 +112,7 @@ font-family: 'Rubik', sans-serif;
     margin-bottom: 20px;
   }
 }
-#two .btn {
-    position: relative;
-    color: #fff;
-    border-radius: 35px;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: 400;
-    font-size: 14px;
-    font-weight: 700
-}
+
 li a{
 	color: black;
 	text-decoration: none;
@@ -165,11 +154,29 @@ ul{
       display: block;
   }
 }
-@media screen and (max-width:320px)
+@media screen and (max-width:450px)
 {
   .right-nav a{
   	margin-left: -20px;
+  }
+  h1{
+  	font-size: 25px;
   } 
+  h2{
+  	font-size:20px;
+  }
+  h3{
+  	font-size: 15px;
+  }
+  h4{
+  	font-size: 15px;
+  }
+ p{
+ 	font-size: 15px;
+ }
+ .btn{
+ 	font-size: 12px;
+ }
 }
 </style>
 
@@ -197,12 +204,12 @@ ul{
 					<a href="#blog" class="navbar-link  text-dark text-decoration-none">Blog</a></li>
 				<li class="navbar-item mx-1 p-2">
 					<a href="#contact" class="navbar-link  text-dark text-decoration-none">Contact</a></li>
-			</ul>
-		</div>
-			<div class="right-nav font-weight-bold">
-				<a href="#signup" class="text-decoration-none mx-3 " style="color:#00008b">SignUp</a>
+			
+				<li class="navbar-item mx-1 p-2"><a href="#signup" class="text-decoration-none mx-3" style="color:#00008b;">SignUp</a>
+				</li>
 				<button class="btn text-light mx-3 shadow-lg" style="background-color: #00008b; border-radius: 35px;">Log in</button>
-			</div>
+		</ul>
+		</div>
 	</nav>
     </div>
     <div class="container">
@@ -211,7 +218,7 @@ ul{
 			<h1 class="font-weight-bold"style="color: #00008b; font-size: 6vw;">Cryptocurrency</h1>
 			<h1 class="font-weight-bold" style="color: #ffb347; font-size: 6vw;">technology</h1>
 			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
-			<button class="btn text-light shadow-lg mb-5" style="background-color: #ffb347; border-radius: 35px;">Sign Up</button>
+			<button class="btn text-light shadow-lg mb-5" style="background-color: #ffb347;">Sign Up</button>
 		</div>
 		<div class=" col-md-4 col-6 ">
 			<img src="man.png" class="center" style="width: 100%;">
@@ -329,7 +336,7 @@ ul{
 	<div class="row">
 		<div class="col-md-6">
 			<h3 style="color: #ffb347">ABOUT US</h3>
-			<h1 style="color:#00008b">BrandedCoin is the <br> best for your ICO</h1>
+			<h2 style="color:#00008b">BrandedCoin is the best for your ICO</h2>
 			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard. Lorem Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard.</p>
 			<img src="sign.png" style="width: 150px; height: 100px;">
 			<p>Cheif Executive</p>
@@ -386,20 +393,20 @@ ul{
 			<img src="bit.png" style="width: 100%; margin-top: 50px;">
 		</div>
 		<div class="col-md-6 col-12 mt-5">
-			<h1 style="color: #00008b; ">BrandedCoin Theme is the best for your ICO</h1>
-			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-			<p style="color: #00008b "><i class="fas fa-check" style="color: orange"></i> Lorem Ipsum is simply dummy text of the printing<br><i class="fas fa-check" style="color: orange"></i> Lorem Ipsum is simply dummy text of the printing<br><i class="fas fa-check" style="color: orange"></i> Lorem Ipsum is simply dummy text of the printing
-			</p>
-			<button class="btn shadow-lg" style="background-color:#ffb347; color: white;">GET STARTED NOW</button>
-		</div>
-</div>
-<div class="row">
-		<div class="col-md-6 col-12 mt-5">
-			<h1 style="color: #00008b; ">Awesome Service that works for you.</h1>
+			<h2 style="color: #00008b; ">BrandedCoin Theme is the best for your ICO</h2>
 			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 			<p style="color: #00008b "><i class="fas fa-check" style="color: orange"></i> Lorem Ipsum is simply dummy text of the printing<br><i class="fas fa-check" style="color: orange"></i> Lorem Ipsum is simply dummy text of the printing<br><i class="fas fa-check" style="color: orange"></i> Lorem Ipsum is simply dummy text of the printing
 			</p>
 			<button class="btn shadow-lg" style="background-color:#ffb347; color: white; ">GET STARTED NOW</button>
+		</div>
+</div>
+<div class="row">
+		<div class="col-md-6 col-12 mt-5">
+			<h2 style="color: #00008b; ">Awesome Service that works for you.</h2>
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+			<p style="color: #00008b "><i class="fas fa-check" style="color: orange"></i> Lorem Ipsum is simply dummy text of the printing<br><i class="fas fa-check" style="color: orange"></i> Lorem Ipsum is simply dummy text of the printing<br><i class="fas fa-check" style="color: orange"></i> Lorem Ipsum is simply dummy text of the printing
+			</p>
+			<div class="btn shadow-lg" style="background-color:#ffb347; color: white; ">GET STARTED NOW</div>
 		</div>
 		<div class="col-md-6 col-12">
 			<img src="bit.png" style="width: 100%; margin-top: 50px;">
@@ -408,14 +415,14 @@ ul{
 </div>
 <div class="container-fluid">
 <div class=" text-center justify-content-center" style="background-color: #f4f1fa ">
-	<h1 style="color: #00008b; margin-top: 10px; padding-top: 50px;">Still Confused About Our Features?<br>Get a Free Trail 7 Days</h1>
+	<h2 style="color: #00008b; margin-top: 10px; padding-top: 50px;">Still Confused About Our Features?<br>Get a Free Trail 7 Days</h2>
 	<p style="margin-top: 50px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem Ipsum is simply.</p>
-	<button class="btn shadow-lg mt-3 p-3 mb-5" style=" background-color:#ffb347; color: white;">BUY TOKEN</button>
+	<div class="btn shadow-lg mt-3 p-3 mb-5" style=" background-color:#ffb347; color: white;">BUY TOKEN</div>
 </div>
 </div>
 <div class="container">
 <div class="text-center mt-5">
-	<h1 style="color: #00008b;">Token Distibution</h1>
+	<h2 style="color: #00008b;">Token Distibution</h2>
 	<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
 	<div class="table-responsive">
 	<table class="table table-bordered mt-5s">
@@ -501,12 +508,12 @@ ul{
 			<p style="margin-top: -18px; margin-left: 20px;">Founders and Teams</p>
 			<div style="width:20px;height:10px; background-color: orange; margin-top: 20px;">
 			</div>
-			<p style="margin-top: -18px; margin-left: 20px;">Advisors</p>
+			<p style="margin-top: -18px; margin-left: 20px;">Advisors
 				<div style="width:20px;height:10px; background-color: lightblue; margin-top: 20px;">
 			</div>
 			<p style="margin-top: -18px; margin-left: 20px;">Bounty Campaign</p>
 		<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-		<button class="btn shadow-lg mt-3 p-3 mb-5" style=" background-color:#ffb347; color: white;">BUY TOKEN</button>
+		<div class="btn shadow-lg mt-3 p-3 mb-5" style=" background-color:#ffb347; color: white;">BUY TOKEN</div>
 	</div>
 </div>
 </div>
@@ -518,9 +525,9 @@ ul{
 		<div class="row">
 		<div class="col-md-6 col-12">
 			<h3  style="color: #ffb347; margin-top: 100px;">MOBILE APP</h3>
-			<h1 style="color: #00008b; margin-top: 20px;">BrandedCoin App for<br>ICO Platform</h1>
+			<h2 style="color: #00008b; margin-top: 20px;">BrandedCoin App for ICO Platform</h2>
 			<p style="margin-top: 20px;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>
-			<div class="btn mt-5" id="two"> <a href="#" class="btn"><i class="fa fa-google-play fa-2x"></i><small>Get it on</small><br><big>Google play</big></a> <a href="#" class="btn" ><i class="fa fa-apple fa-2x"></i> <small>Download it on</small><br><big>App Store</big></a></div>
+			<div class="buttons mt-5"> <a href="#" class="btn"><i class="fa fa-google-play fa-2x"></i><small>Get it on</small><br><big>Google play</big></a> <a href="#" class="btn" ><i class="fa fa-apple fa-2x"></i> <small>Download it on</small><br><big>App Store</big></a></div>
 		</div>
 		<div class="col-md-6 col-12">
 			<img src="mobile.png" style="width: 100%;">
